@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gridview"
+        android:layout_alignRight="@+id/gridview"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/cardsLeftText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gridview"
+        android:layout_alignParentLeft="true"
+        android:text="Deck: 52" />
+
+    <TextView
+        android:id="@+id/timePassedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gridview"
+        android:layout_alignTop="@+id/addCardsButton"
+        android:text="Time: 0" />
+
+    <Button
+        android:id="@+id/addCardsButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/gridview"
+        android:layout_marginRight="28dp"
+        android:layout_toLeftOf="@+id/resetButton"
+        android:text="+" />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/addCardsButton"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/addCardsButton"
+        android:text="Score: 0" />
+
+    <TextView
+        android:id="@+id/scoreText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gridview"
+        android:layout_alignLeft="@+id/scoreText"
+        android:text="Score: 0" />
+
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addCardsButton"
+        android:layout_alignRight="@+id/gridview"
+        android:layout_marginBottom="14dp"
+        android:text="Pause" />
+
+</RelativeLayout>
